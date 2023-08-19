@@ -17,5 +17,7 @@ def populationgrowth(n,g,l):
     for i in range (g):
         m= rng.poisson(lam=l, size=n)
         n=np.sum(m)
+         if n>0:
+            l=l*50/n
         print(n)
 populationgrowth(10, 10, 2)        
